@@ -2,6 +2,8 @@ import pandas as pd
 from pandas import read_csv
 import streamlit as st
 import plotly.express as plt
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 
 
 # Leitura dos dados
@@ -15,34 +17,14 @@ st.set_page_config(page_icon=':school:', page_title='Analfabetismo Funcional')
 #Menu 
 menu = st.sidebar.selectbox('Menu', ['Tela Inicial', 'Dados do Brasil de Acordo Com a Região', 'Dados do Brasil de Acordo Com o Sexo','Dados do Brasil de Acordo Com a Cor e Raça', 'Dados do Brasil de Acordo com a Faixa Étaria'])
 
+#tela inicial: 
 if menu == 'Tela Inicial':
     with st.container():
         st.header('Analfabetismo Funcional No Brasil Período Pré e Pós Pandemia') 
-        st.write(
-            """
-            Ficamos encarregados de abordar o tema do analfabetismo
-            funcional, considerando os grandes desafios que a pandemia
-            representou para a educação brasileira, utilizamos uma
-            metodologia comparativa para analisar os períodos antes e
-            depois da pandemia. Os dados do período pré-pandemia são
-            provenientes da PNAD 2019, enquanto os dados pós-pandemia
-            foram extraídos da PNAD 2023.
-            """
-        )
-        st.title('Você sabe o que é analfabetismo funcional ?')
-        st.write(
-            """
-            Segundo o IBGE e abordagens científicas, é uma condição que
-            descreve indivíduos que, embora tenham sido alfabetizados
-            em um nível básico, não possuem habilidades suficientes para
-            compreender, interpretar e aplicar informações escritas ou
-            matemáticas de maneira eficaz em situações cotidianas.
-            Essa forma de analfabetismo impede o pleno uso da leitura,
-            escrita e cálculos simples para tarefas que exigem maior
-            complexidade, como a interpretação de textos ou a resolução
-            de problemas mais avançados.
-            """
-        )
+        st.write('Ficamos encarregados de abordar o tema do analfabetismo funcional, considerando os grandes desafios que a pandemia representou para a educação brasileira, utilizamos um metodologia comparativa para analisar os períodos antes e depois da pandemia. Os dados do período pré-pandemia são provenientes da PNAD 2019, enquanto os dados pós-pandemia foram extraídos da PNAD 2023. ')
+        with st.expander('Você sabe o que é analfabetismo funcional ?', False):
+            st.write('Segundo o IBGE e abordagens científicas, é uma condição que descreve indivíduos que, embora tenham sido alfabetizados em um nível básico, não possuem habilidades suficientes para compreender, interpretar e aplicar informações escritas o matemáticas de maneira eficaz em situações cotidianas. Essa forma de analfabetismo impede o pleno uso da leitura, escrita e cálculos simples para tarefas que exigem maior complexidade, como a interpretação de textos ou a resolução de problemas mais avançados.')
+ 
  #Dados dos analfabetos distribuidos nas regiões:       
 elif menu == 'Dados do Brasil de Acordo Com a Região':
     with st.container():
