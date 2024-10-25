@@ -34,9 +34,9 @@ if menu == 'Tela Inicial':
     st.write('É importante para entender como a pandemia afetou a educação e as habilidades básicas de leitura e escrita da população. Essa comparação ajuda a identificar o aumento das desigualdades, os grupos mais impactados, e orienta a formulação de políticas educacionais focadas na recuperação e redução do analfabetismo, garantindo melhor acesso à educação e mais oportunidades no futuro.')
 # Metogologia e resultados :
     st.header('Exposição dos resultados')
-    st.write('Verifique os gráficos dos respectivos indicadores no menu lateral ')
     st.write('A visualização dos dados e gráficos comparando os de 2019 com os de 2023 permite entender as mudanças ocorridas no período, especialmente após o impacto da pandemia. Esses gráficos facilitam a análise das variações nas taxas de analfabetismo funcional, destacando tendências, diferenças entre grupos (como faixa etária, raça/cor e sexo) e ajudando a identificar quais áreas ou populações foram mais impactadas. A comparação visual simplifica a identificação de padrões, auxiliando na tomada de decisões fundamentadas para direcionar políticas públicas e estratégias educacionais de forma mais eficaz. Nosso aplicativo desenvolvido com Streamlit desempenha exatamente essa função, permitindo a exibição interativa de gráficos que comparam os dados sobre analfabetismo funcional nos períodos pré e pós-pandemia. Isso facilita a visualização clara e acessível das informações, ajudando a compreender o impacto da pandemia na educação e apoiando a criação de políticas públicas mais informadas e direcionadas.')
     
+    st.write('Verifique os gráficos dos respectivos indicadores no menu lateral')
     col1, col2 = st.columns(2)
     with col1:
         st.image('img/dados_regiao_2019.jpg')
