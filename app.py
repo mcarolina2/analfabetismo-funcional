@@ -1,10 +1,8 @@
 import pandas as pd
 from pandas import read_csv
 import streamlit as st
+import numpy as np
 import plotly.express as plt
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-
 
 # Leitura dos dados
 base_2019 = pd.read_csv('dados/pnad_2019_filtrado.csv',sep=',',decimal='.')
@@ -43,9 +41,6 @@ if menu == 'Tela Inicial':
     with col2:
         st.image('img/dados_sexo_2023.jpg')
         
-    
-
-
  #Dados dos analfabetos distribuidos nas regiões:       
 elif menu == 'Dados Por Região':
     with st.container():
